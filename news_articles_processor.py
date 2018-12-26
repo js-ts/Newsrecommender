@@ -40,13 +40,12 @@ def get_parts_of_speach(tokens_list):
 
 def get_nouns(tokens_list):
 	tagged = nltk.pos_tag(tokens_list)
-	list_tagged_tokens = []
+	list_noun_tokens = []
 	 
 	for token, tag_token in tagged:
 	    if tag_token in ["NN", "NNS", "NNP", "NNPS"]:
-	        list_tagged_tokens.append(token)
-	tagged = list_tagged_tokens
-	return tagged
+	        list_noun_tokens.append(token)
+	return list_noun_tokens
 
 def get_common_words(list_one, list_two):
 	common_words = [value for value in list_two if value in list_one]	
