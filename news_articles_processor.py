@@ -4,6 +4,7 @@ import json
 from bs4 import BeautifulSoup
 
 
+# Download relevant NLTK data
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 
