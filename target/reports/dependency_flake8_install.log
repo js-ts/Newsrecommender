@@ -1,0 +1,8 @@
+Collecting flake8~=3.2
+  Using cached https://files.pythonhosted.org/packages/34/a6/49e2849a0e5464e1b5d621f63bc8453066f0f367bb3b744a33fca0bc1ddd/flake8-3.6.0-py2.py3-none-any.whl
+Requirement already satisfied: pycodestyle<2.5.0,>=2.4.0 in /home/zia/anaconda3/lib/python3.6/site-packages (from flake8~=3.2) (2.4.0)
+Requirement already satisfied: mccabe<0.7.0,>=0.6.0 in /home/zia/anaconda3/lib/python3.6/site-packages (from flake8~=3.2) (0.6.1)
+Requirement already satisfied: setuptools>=30 in /home/zia/anaconda3/lib/python3.6/site-packages (from flake8~=3.2) (39.0.1)
+Requirement already satisfied: pyflakes<2.1.0,>=2.0.0 in /home/zia/anaconda3/lib/python3.6/site-packages (from flake8~=3.2) (2.0.0)
+Installing collected packages: flake8
+Successfully installed flake8-3.6.0
