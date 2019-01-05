@@ -4,4 +4,4 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - ./src/main/python/test_news_articles_processor
+  - src/main/python/test_news_articles_processor.py
