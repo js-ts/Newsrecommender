@@ -2,7 +2,7 @@ import nltk
 import requests
 import json
 from bs4 import BeautifulSoup
-
+import re
 
 # Download relevant NLTK data
 nltk.download('averaged_perceptron_tagger')
