@@ -22,7 +22,7 @@ def get_parsed_text(text):
     return text
 
 
-#regular expression as a DSL
+# regular expression as a DSL
 def rem_special_char(text):
     cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
     return cleaned_text
