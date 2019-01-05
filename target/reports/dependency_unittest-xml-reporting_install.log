@@ -1,0 +1,5 @@
+Collecting unittest-xml-reporting
+  Using cached https://files.pythonhosted.org/packages/d4/82/28569924f68a539bd7b0cb966cfaac4de7f805201d1384d653aae0806bac/unittest_xml_reporting-2.2.0-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.4.0 in /home/zia/anaconda3/lib/python3.6/site-packages (from unittest-xml-reporting) (1.12.0)
+Installing collected packages: unittest-xml-reporting
+Successfully installed unittest-xml-reporting-2.2.0

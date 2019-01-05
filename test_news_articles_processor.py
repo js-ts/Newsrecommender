@@ -10,7 +10,6 @@ class TestGetToken(unittest.TestCase):
 
 	def test_get_nouns(self):
 		self.assertEqual(get_nouns(['car', 'banana', 'go']), ['car', 'banana'])
-		
 
 
 if __name__ == '__main__':

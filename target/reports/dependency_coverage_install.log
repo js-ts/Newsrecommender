@@ -1,0 +1,4 @@
+Collecting coverage~=4.2
+  Using cached https://files.pythonhosted.org/packages/a4/5c/b3eac6aa7eb4af83c8580d9c1578343910bdcc59e64e3565402f9a527f9c/coverage-4.5.2-cp36-cp36m-manylinux1_x86_64.whl
+Installing collected packages: coverage
+Successfully installed coverage-4.5.2
