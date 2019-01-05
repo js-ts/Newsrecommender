@@ -1,0 +1,34 @@
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.6' does not exist -- can't clean it
+running sdist
+running egg_info
+creating newsrecommender.egg-info
+writing newsrecommender.egg-info/PKG-INFO
+writing dependency_links to newsrecommender.egg-info/dependency_links.txt
+writing namespace_packages to newsrecommender.egg-info/namespace_packages.txt
+writing top-level names to newsrecommender.egg-info/top_level.txt
+writing manifest file 'newsrecommender.egg-info/SOURCES.txt'
+reading manifest file 'newsrecommender.egg-info/SOURCES.txt'
+writing manifest file 'newsrecommender.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating newsrecommender-1.0
+creating newsrecommender-1.0/newsrecommender.egg-info
+copying files to newsrecommender-1.0...
+copying article_to_json.py -> newsrecommender-1.0
+copying demo.py -> newsrecommender-1.0
+copying news_articles_processor.py -> newsrecommender-1.0
+copying setup.py -> newsrecommender-1.0
+copying newsrecommender.egg-info/PKG-INFO -> newsrecommender-1.0/newsrecommender.egg-info
+copying newsrecommender.egg-info/SOURCES.txt -> newsrecommender-1.0/newsrecommender.egg-info
+copying newsrecommender.egg-info/dependency_links.txt -> newsrecommender-1.0/newsrecommender.egg-info
+copying newsrecommender.egg-info/namespace_packages.txt -> newsrecommender-1.0/newsrecommender.egg-info
+copying newsrecommender.egg-info/top_level.txt -> newsrecommender-1.0/newsrecommender.egg-info
+copying newsrecommender.egg-info/zip-safe -> newsrecommender-1.0/newsrecommender.egg-info
+Writing newsrecommender-1.0/setup.cfg
+creating dist
+Creating tar archive
+removing 'newsrecommender-1.0' (and everything under it)
