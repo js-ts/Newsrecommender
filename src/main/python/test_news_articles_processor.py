@@ -1,6 +1,6 @@
 import unittest
-from src.main.python.news_articles_processor import get_tokens
-from src.main.python.news_articles_processor import get_nouns
+from news_articles_processor import get_tokens
+from news_articles_processor import get_nouns
 
 
 class TestGetToken(unittest.TestCase):
