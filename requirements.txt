@@ -2,4 +2,6 @@ nltk == 3.4
 requests == 2.20.1
 beautifulsoup4 == 4.6.3
 Flask==1.0.2
+gunicorn==19.9.0
+
 
