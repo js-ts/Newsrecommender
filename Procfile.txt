@@ -1,1 +1,1 @@
-web: gunicorn --chdir src/main/python recommender_server:app
+web: gunicorn run:app
