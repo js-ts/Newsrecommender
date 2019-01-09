@@ -1,3 +1,0 @@
-article_to_json
-demo
-news_articles_processor

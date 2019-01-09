@@ -38,3 +38,4 @@ articles_list = [
 ]
 
 nap.write_article_to_json(articles_list)
+

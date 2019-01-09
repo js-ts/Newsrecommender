@@ -33,6 +33,7 @@ if __name__ == '__main__':
         py_modules = [
             'article_to_json',
             'demo',
+            'recommender_server',
             'news_articles_processor'
         ],
         classifiers = [

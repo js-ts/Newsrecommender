@@ -2,11 +2,14 @@ import nltk
 import requests
 import json
 from bs4 import BeautifulSoup
-
+import re
 
 # Download relevant NLTK data
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
+
+
+url_path = '/home/zia/PycharmProjects/newsrecommender/src/main/python/article_data.json'
 
 
 def get_article_content(url):
@@ -20,6 +23,12 @@ def get_parsed_text(text):
     soup = BeautifulSoup(text, 'html.parser')
     text = get_remove_text(soup)
     return text
+
+
+# regular expression as a DSL
+def rem_special_char(text):
+    cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
+    return cleaned_text
 
 
 def get_remove_text(soup):
@@ -73,13 +82,13 @@ def write_article_to_json(articles_list):
         }
 
         try:
-            with open('article_data.json') as f:
+            with open(url_path) as f:
                 data = json.load(f)
                 dict_data["id"] = data["counter"]
                 data["data"].append(dict_data)
                 data["counter"] = data["counter"] + 1
 
-            with open('article_data.json', 'w') as outfile:
+            with open(url_path, 'w') as outfile:
                 json.dump(data, outfile, indent=4)
         except ValueError:
             dict_data = {
@@ -88,14 +97,14 @@ def write_article_to_json(articles_list):
                     dict_data
                 ]
             }
-            with open('article_data.json', 'w') as outfile:
+            with open(url_path, 'w') as outfile:
                 json.dump(dict_data, outfile, indent=4)
 
 
 def read_article_from_json():
     content = {}
     try:
-        with open('article_data.json') as f:
+        with open(url_path) as f:
             content = json.load(f)
             content = content['data']
     except ValueError:
