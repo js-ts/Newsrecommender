@@ -1,7 +1,7 @@
 Name                         Stmts   Miss Branch BrPart  Cover
 --------------------------------------------------------------
 article_to_json.py               3      3      0      0     0%
-news_articles_processor.py      95     95     24      0     0%
+news_articles_processor.py      97     97     24      0     0%
 recommender_server.py           14     14      2      0     0%
 --------------------------------------------------------------
-TOTAL                          112    112     26      0     0%
+TOTAL                          114    114     26      0     0%

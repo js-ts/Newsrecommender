@@ -1,10 +1,28 @@
 
 Running tests...
 ----------------------------------------------------------------------
+EE
+======================================================================
+ERROR [0.001s]: test_get_nouns (news_articles_processor_tests.TestGetToken)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zia/PycharmProjects/newsrecommender/src/unittest/python/news_articles_processor_tests.py", line 12, in test_get_nouns
+    self.assertEqual(get_nouns(['car', 'banana', 'go']), ['car', 'banana'])
+  File "/home/zia/PycharmProjects/newsrecommender/src/main/python/news_articles_processor.py", line 60, in get_nouns
+    for token, tag_token in tagged:
+ValueError: too many values to unpack (expected 2)
+
+======================================================================
+ERROR [0.008s]: test_get_token (news_articles_processor_tests.TestGetToken)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zia/PycharmProjects/newsrecommender/src/unittest/python/news_articles_processor_tests.py", line 9, in test_get_token
+    self.assertNotEqual(len(get_tokens('hello world')), 0)
+TypeError: object of type 'function' has no len()
 
 ----------------------------------------------------------------------
-Ran 0 tests in 0.000s
+Ran 2 tests in 0.009s
 
-OK
+FAILED (errors=2)
 
 Generating XML reports...

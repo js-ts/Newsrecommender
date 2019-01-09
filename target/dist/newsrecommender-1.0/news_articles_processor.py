@@ -3,13 +3,14 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import re
+import os
 
 # Download relevant NLTK data
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 
-
-url_path = '/home/zia/PycharmProjects/newsrecommender/src/main/python/article_data.json'
+dirname = os.path.dirname(__file__)
+url_path = os.path.join(dirname, 'article_data.json')
 
 
 def get_article_content(url):

@@ -3,13 +3,14 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import re
+import os
 
 # Download relevant NLTK data
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 
-
-url_path = '/home/zia/PycharmProjects/newsrecommender/src/main/python/article_data.json'
+dirname = os.path.dirname(__file__)
+url_path = os.path.join(dirname, 'article_data.json')
 
 
 def get_article_content(url):
@@ -44,16 +45,16 @@ def get_remove_text(soup):
 
 def get_tokens(text):
     text_tokens = nltk.tokenize.word_tokenize(text)
-    return text_tokens
+    #return text_tokens
+
+    def get_parts_of_speech():
+        pos_tagged = nltk.pos_tag(text_tokens)
+        return pos_tagged
+    return get_parts_of_speech
 
 
-def get_parts_of_speach(tokens_list):
-    tagged = nltk.pos_tag(tokens_list)
-    return tagged
+def get_nouns(tagged):
 
-
-def get_nouns(tokens_list):
-    tagged = nltk.pos_tag(tokens_list)
     list_noun_tokens = []
 
     for token, tag_token in tagged:
@@ -71,7 +72,7 @@ def write_article_to_json(articles_list):
     for url in articles_list:
         text = get_article_content(url)
         list_tokens = get_tokens(text)
-        list_pos = get_parts_of_speach(list_tokens)
+        list_pos = get_parts_of_speech(list_tokens)
         list_nouns = get_nouns(list_tokens)
         dict_data = {
             "url": url,
@@ -129,8 +130,9 @@ def sort_by_value(tosort_dict):
 def get_top_3_articles(url):
     article_list_from_json = read_article_from_json()
     text = get_article_content(url)
-    list_tokens = get_tokens(text)
-    list_nouns = get_nouns(list_tokens)
+    pos_function = get_tokens(text)
+    list_of_pos = pos_function
+    list_nouns = get_nouns(list_of_pos)
     common_words_dict = {}
     for article in article_list_from_json:
         common_words = get_common_words(
@@ -142,3 +144,8 @@ def get_top_3_articles(url):
     top_3_match = sorted_dict[-3:]
     top_3_match = list(reversed(top_3_match))
     return top_3_match
+
+
+if __name__ == '__main':
+    pos_tags = get_tokens('khan is angry because little khan can not remember things from 5 minutes earlier.')
+    print(pos_tags())
