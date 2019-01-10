@@ -22,7 +22,7 @@ if __name__ == '__main__':
         name = 'newsrecommender',
         version = '1.0',
         description = 'News recommender',
-        long_description = 'An example PyBuilder / Git project for project management\nand file version control. See blog post at http://bit.ly/2QY65wO for a\nmore through explanation.',
+        long_description = '',
         author = 'Zia Muhammad',
         author_email = 'zia-muhammad@outlook.com',
         license = 'None',

@@ -1,14 +1,5 @@
 {
-  "errors": [
-    {
-      "test": "news_articles_processor_tests.TestGetToken.test_get_nouns",
-      "traceback": "Traceback (most recent call last):\n  File \"/home/zia/PycharmProjects/newsrecommender/src/unittest/python/news_articles_processor_tests.py\", line 12, in test_get_nouns\n    self.assertEqual(get_nouns(['car', 'banana', 'go']), ['car', 'banana'])\n  File \"/home/zia/PycharmProjects/newsrecommender/src/main/python/news_articles_processor.py\", line 60, in get_nouns\n    for token, tag_token in tagged:\nValueError: too many values to unpack (expected 2)\n"
-    },
-    {
-      "test": "news_articles_processor_tests.TestGetToken.test_get_token",
-      "traceback": "Traceback (most recent call last):\n  File \"/home/zia/PycharmProjects/newsrecommender/src/unittest/python/news_articles_processor_tests.py\", line 9, in test_get_token\n    self.assertNotEqual(len(get_tokens('hello world')), 0)\nTypeError: object of type 'function' has no len()\n"
-    }
-  ],
+  "errors": [],
   "failures": [],
   "tests-run": 2
 }

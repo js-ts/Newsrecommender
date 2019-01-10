@@ -48,9 +48,9 @@ def get_tokens(text):
     return text_tokens
 
 
-def get_parts_of_speach(tokens_list):
-    tagged = nltk.pos_tag(tokens_list)
-    return tagged
+def get_parts_of_speech(tokens_list):
+        tagged = nltk.pos_tag(tokens_list)
+        return tagged
 
 
 def get_nouns(tokens_list):
@@ -72,7 +72,7 @@ def write_article_to_json(articles_list):
     for url in articles_list:
         text = get_article_content(url)
         list_tokens = get_tokens(text)
-        list_pos = get_parts_of_speach(list_tokens)
+        list_pos = get_parts_of_speech(list_tokens)
         list_nouns = get_nouns(list_tokens)
         dict_data = {
             "url": url,
@@ -143,3 +143,5 @@ def get_top_3_articles(url):
     top_3_match = sorted_dict[-3:]
     top_3_match = list(reversed(top_3_match))
     return top_3_match
+
+

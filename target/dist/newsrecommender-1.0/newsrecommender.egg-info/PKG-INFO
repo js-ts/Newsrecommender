@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: newsrecommender
+Version: 1.0
+Summary: News recommender
+Home-page: https://github.com/Ziasafi/newsrecommender.git
+Author: Zia Muhammad
+Author-email: zia-muhammad@outlook.com
+License: None
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python

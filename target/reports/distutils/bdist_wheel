@@ -9,6 +9,7 @@ creating build
 creating build/lib
 copying article_to_json.py -> build/lib
 copying demo.py -> build/lib
+copying recommender_server.py -> build/lib
 copying news_articles_processor.py -> build/lib
 installing to build/bdist.linux-x86_64/wheel
 running install
@@ -17,6 +18,7 @@ creating build/bdist.linux-x86_64
 creating build/bdist.linux-x86_64/wheel
 copying build/lib/article_to_json.py -> build/bdist.linux-x86_64/wheel
 copying build/lib/demo.py -> build/bdist.linux-x86_64/wheel
+copying build/lib/recommender_server.py -> build/bdist.linux-x86_64/wheel
 copying build/lib/news_articles_processor.py -> build/bdist.linux-x86_64/wheel
 running install_egg_info
 running egg_info
@@ -33,6 +35,7 @@ creating 'dist/newsrecommender-1.0-py3-none-any.whl' and adding 'build/bdist.lin
 adding 'article_to_json.py'
 adding 'demo.py'
 adding 'news_articles_processor.py'
+adding 'recommender_server.py'
 adding 'newsrecommender-1.0.dist-info/METADATA'
 adding 'newsrecommender-1.0.dist-info/WHEEL'
 adding 'newsrecommender-1.0.dist-info/namespace_packages.txt'

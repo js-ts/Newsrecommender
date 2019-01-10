@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="news_articles_processor_tests.TestGetToken-20190110113728" skipped="0" tests="2" time="0.133" timestamp="2019-01-10T11:37:28">
+	<testcase classname="news_articles_processor_tests.TestGetToken" name="test_get_nouns" time="0.127" timestamp="2019-01-10T11:37:28"/>
+	<testcase classname="news_articles_processor_tests.TestGetToken" name="test_get_token" time="0.006" timestamp="2019-01-10T11:37:28"/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
