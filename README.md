@@ -1,1 +1,1 @@
-# newsrecommender
+# Content based newsrecommender system
