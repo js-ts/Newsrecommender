@@ -83,14 +83,17 @@ In software development, a metric is the measurement of a program’s performanc
 ### 1. Duplication Metrics:
 
 There are no duplication(line duplication, files duplication, blocks duplication) in project code.
+![Duplication metrics](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/duplication.PNG)
 
 ### 2. Security Metrics:
 
 Security metrics find vulnerabilities and new vulnerabilities in source code.
+![Security metrics](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/security.png)
 
 ### 3. Reliability Metrics:
 
 Reliability metric analyze new bugs(number of news bugs issues in source code.
+![Reliability metrics](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/reliability.png)
 
 Clean code development:
 =======================
