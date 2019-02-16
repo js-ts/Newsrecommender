@@ -59,23 +59,21 @@ UML is a standardized modeling language consisting of an integrated set of diagr
 Following are the UML diagrams for content based news recommender system.
 
 ### 1. Use case UML diagram:
+Use case diagram of the recommender system as shown in below fig-1.
 ![Use case UML Diagram](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/usecase%20UML.jpg)
 
-Use case diagram of the recommender system as shown in below fig-1.
-
-Use case UML diagram of news recommender system fig-1
 
 ### 2. Activity UML Diagram :
-
 Activity UML diagram of the recommender system as shown in below fig-2.
+![Activity UML Diagram](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/activity%20uml.jpg)
 
- Activity UML diagram of news recommender system fig-2
 
 ### 3. Sequence UML diagram:
-
 Sequence UML diagram of the recommender system as shown in below fig-3.
+![Sequence UML Diagram](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sequenceUML.jpg)
 
- Sequence UML diagram of news recommender system fig-3
+
+
 
 Metrics:
 ========
