@@ -107,28 +107,43 @@ Clean code means that code which is easy to understand and easy to change. Easy 
 
 Proper naming convention is very important in clean code development. Easy readable to user.
 
+![Naming Convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/namingconvention.png)
+
 ### 2. **No side effect :**
 
 In programming, side effect is when a function or expression modify state of a variable from outside its scope(local environment).Mostly without side effect functions have used in this project code.
+
+![No side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sideeffect.png)
 
 ### 3. **Exception Handling:**
 
 Wherever necessary exception handling blocks have been added to ensure that no run time errors are thrown. Here used exception handling in this project code to catch value error exception. If url found what to do and if not found what to do then, for this purpose exception handling used .
 
+![Exception Handling](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/exceptionhandling.png)
+
 ### 4. **Unit tests:**
 
 Make sure each piece of code is doing what you expect it to do. Following is an example of unit test which used for this recommender system.
 
+![Unit test](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/unittest.png)
+
 ### 5. **Useless comment:**
 
 It’s important to write clean and simple code that can be easily understood by others. Like obvious names to variables, define explicit functions and comments. But in this project code, avoided useless comments because clear name for variables and functions have been used. Everyone can easily understand from variables and functions names what are these functions doing.
+
+![Useless comments](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/uselesscomments.png)
 
 Build Management with Pybuilder:
 ================================
 
 In this recommender system , Pybuilder has been used with build management. Pybuilder is a project management tool for python. It organizes code with a consistent directory structure (for source code, scripts and tests), manages unit testing, code coverage and can easily package your code. Here is the Build.py file which consist main description for this project.
 
+![Build Management](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/build.ppp.png)
+
 After runing the pybuilder(pyb) with unit tests, it shows in below image that build successful.
+
+![Build Management Successed](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/buildsucces.png)
+
 
 CI/CD (Continuous Integration and Continuous Delivery with Travis):
 ===================================================================
@@ -137,7 +152,13 @@ Continuous integration and Contentious delivery pipeline of this project is base
 
 Here it is travis.yml file(added to the repository, It tells to Travis CI what to do.
 
+![Travisyml file](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/travisyml.png)
+
 Check build status, it is pass or fail. See output in below figures.
+
+![Travis](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/passtravis.png)
+
+![output travis](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newtravis.png)
 
 DSL(Domain specific language):
 ==============================
@@ -148,11 +169,15 @@ Domain specific language is a computer language specialized to a particular appl
 
 A regular expression is a sequence of character that helps you match or find other strings or set of strings, using a specialized syntax held in pattern. Regular expression used as a DSL in this project code. Regular expression used to remove special characters from text.
 
+![Regular expression](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/regularexp.png)
+
 ### 2. HTML:
 
 HTML is standard markup language which is using to create and design web page .
 
 Here it is used as DSL because HTML has a specific domain, It is only using for web pages. I used HTML to make front web page for my recommender system where user can enter url and recommender system recommending top 3 articles.
+
+![HTML](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/html.png)
 
 Functional Programming:
 =======================
@@ -163,26 +188,31 @@ Functional programming is a programming paradigm of writing code. Functional pro
 
 Some variables have been made immutable in project code.
 
+![Final DS](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/finalds.png)
+
 ### 2. **Side effects free function:**
 
 Side effect are operation that change the global state of a variable or expression. All assignment and input/output operators considered side effects. Here I used function programming in project code, which has no side effect and mostly in functional programming , function have no side effects. Following is an example of side effect free function.
 
-### 
+![Side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sideeffect.png)
 
-### 
-
-### 
 
 ### 3)High order function:
 
 A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map and filter have used in project code. Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here map function takes get\_common\_words() function and a list, return as a result common nouns list.
 
+![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/mapfunction.png)
+
 ### 4. **Clojures/Anonymous function:**
 
 Lambda is an anonymous function. Lambda function used when we don’t want to write full function like def . A lambda function can take any number of arguments but can only have one expression. Assign the lambda expression to a variable, it works like python function. Lambda function used in this project code.
+
+![Anonymous function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/lambdafunc.png)
 
 ### 5. **Function as a parameter and return value:**
 
 Take a function as a parameter and return value has also used in this project code.
 
 It is an example of high order function, here “get\_token()” is a normal function, takes a function “get\_parts\_of\_speech()” as a input and as a result return a function.
+
+![Function as a parameter](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/inputfuncreturnfunc.png)
