@@ -3,6 +3,7 @@ demo.py
 news_articles_processor.py
 recommender_server.py
 setup.py
+test_news_articles_processor.py
 newsrecommender.egg-info/PKG-INFO
 newsrecommender.egg-info/SOURCES.txt
 newsrecommender.egg-info/dependency_links.txt

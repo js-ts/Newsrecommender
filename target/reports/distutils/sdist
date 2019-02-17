@@ -23,6 +23,7 @@ copying demo.py -> newsrecommender-1.0
 copying news_articles_processor.py -> newsrecommender-1.0
 copying recommender_server.py -> newsrecommender-1.0
 copying setup.py -> newsrecommender-1.0
+copying test_news_articles_processor.py -> newsrecommender-1.0
 copying newsrecommender.egg-info/PKG-INFO -> newsrecommender-1.0/newsrecommender.egg-info
 copying newsrecommender.egg-info/SOURCES.txt -> newsrecommender-1.0/newsrecommender.egg-info
 copying newsrecommender.egg-info/dependency_links.txt -> newsrecommender-1.0/newsrecommender.egg-info

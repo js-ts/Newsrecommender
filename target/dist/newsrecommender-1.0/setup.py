@@ -34,6 +34,7 @@ if __name__ == '__main__':
             'article_to_json',
             'demo',
             'recommender_server',
+            'test_news_articles_processor',
             'news_articles_processor'
         ],
         classifiers = [

@@ -47,6 +47,11 @@ def get_tokens(text):
     text_tokens = nltk.tokenize.word_tokenize(text)
     return text_tokens
 
+#    def get_parts_of_speech(text_tokens):
+#        pos_tagged = nltk.pos_tag(text_tokens)
+#        return  pos_tagged
+#    return get_parts_of_speech()
+
 
 def get_parts_of_speech(tokens_list):
         tagged = nltk.pos_tag(tokens_list)
@@ -65,6 +70,7 @@ def get_nouns(tokens_list):
 
 def get_common_words(list_one, list_two):
     common_words = [value for value in list_two if value in list_one]
+#    result_com_words = list(map(get_common_words(), common_words))
     return common_words
 
 
