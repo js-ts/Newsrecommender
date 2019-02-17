@@ -10,7 +10,7 @@ class TestGetToken(unittest.TestCase):
 
     def test_get_nouns(self):
         self.assertEqual(get_nouns('car'), 'car')
-        self.assertEqual(get_nouns('car'), 'None')
+        #self.assertEqual(get_nouns('car'), 'None')
 
 
 if __name__ == '__main__':
