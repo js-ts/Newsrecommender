@@ -61,12 +61,6 @@ def get_nouns(tagged):
     if tag_token in ["NN", "NNS", "NNP", "NNPS"]:
         return token
 
-    # list_noun_tokens = []
-    # for token, tag_token in tagged:
-    #     if tag_token in ["NN", "NNS", "NNP", "NNPS"]:
-    #         list_noun_tokens.append(token)
-    #         return list_noun_tokens
-
 
 def get_common_words(list_one, list_two):
 
@@ -138,8 +132,7 @@ def get_top_3_articles(url):
     text = get_article_content(url)
     list_tokens = get_tokens(text)
     list_pos = get_parts_of_speech(list_tokens)
-    list_nouns = get_nouns(list_pos)
-    #list_nouns = list(map(get_nouns, list_tokens))
+    list_nouns = list(map(get_nouns, list_pos))
     common_words_dict = {}
     for article in article_list_from_json:
         common_words = get_common_words(
