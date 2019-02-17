@@ -18,8 +18,9 @@ url_path = os.path.join(dirname, 'article_data.json')
 def get_article_content(url):
     read_content = requests.get(url)
     content = read_content.text
-    text = remove_spec_char(content)
-    return text
+    special_char_func = get_parsed_text(content)
+    clean_text = special_char_func
+    return clean_text
 
 
 def get_parsed_text(text):
@@ -31,9 +32,6 @@ def get_parsed_text(text):
         return cleaned_text
     return remove_special_char
 
-
-remove_spec_char = get_parsed_text()
-remove_spec_char()
 
 # #regular expression as a DSL
 # def remove_special_char(text):
