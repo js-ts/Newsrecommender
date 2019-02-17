@@ -24,7 +24,6 @@ def recommended_articles_post():
     input_url = request.form["url"]
     print(input_url)
     top_3_match_articles = nap.get_top_3_articles(str(input_url))
-#    return jsonify(top_3_match_articles)
 
     recommended_articles = """
         <h2> Your top3 article are:</h2>
