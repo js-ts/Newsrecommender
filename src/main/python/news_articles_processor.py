@@ -56,12 +56,16 @@ def get_parts_of_speech(tokens_list):
 
 
 def get_nouns(tagged):
+    token = tagged[0]
+    tag_token = tagged[1]
+    if tag_token in ["NN", "NNS", "NNP", "NNPS"]:
+        return token
 
-    list_noun_tokens = []
-    for token, tag_token in tagged:
-        if tag_token in ["NN", "NNS", "NNP", "NNPS"]:
-            list_noun_tokens.append(token)
-            return list_noun_tokens
+    # list_noun_tokens = []
+    # for token, tag_token in tagged:
+    #     if tag_token in ["NN", "NNS", "NNP", "NNPS"]:
+    #         list_noun_tokens.append(token)
+    #         return list_noun_tokens
 
 
 def get_common_words(list_one, list_two):
