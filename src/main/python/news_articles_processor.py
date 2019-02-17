@@ -19,7 +19,7 @@ def get_article_content(url):
     read_content = requests.get(url)
     content = read_content.text
     special_char_func = get_parsed_text(content)
-    clean_text = special_char_func
+    clean_text = special_char_func()
     return clean_text
 
 
