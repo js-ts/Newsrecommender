@@ -18,23 +18,30 @@ url_path = os.path.join(dirname, 'article_data.json')
 def get_article_content(url):
     read_content = requests.get(url)
     content = read_content.text
-    text = get_parsed_text(content)
+    text = remove_spec_char(content)
     return text
 
 
 def get_parsed_text(text):
     soup = BeautifulSoup(text, 'html.parser')
-    text = get_remove_text(soup)
-    return text
+    text = get_clean_text(soup)
+
+    def remove_special_char():
+        cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
+        return cleaned_text
+    return remove_special_char
 
 
-# regular expression as a DSL
-def rem_special_char(text):
-    cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
-    return cleaned_text
+remove_spec_char = get_parsed_text()
+remove_spec_char()
+
+# #regular expression as a DSL
+# def remove_special_char(text):
+#     cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
+#     return cleaned_text
 
 
-def get_remove_text(soup):
+def get_clean_text(soup):
     for script in soup(["script", "style"]):
         script.decompose()
 
