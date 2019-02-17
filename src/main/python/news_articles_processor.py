@@ -73,7 +73,7 @@ def write_article_to_json(articles_list):
         text = get_article_content(url)
         list_tokens = get_tokens(text)
         list_pos = get_parts_of_speech(list_tokens)
-        list_nouns = get_nouns(list_pos)
+        list_nouns = list(map(get_nouns, list_pos))
         dict_data = {
             "url": url,
             "text": text,
