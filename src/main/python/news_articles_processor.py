@@ -133,7 +133,8 @@ def get_top_3_articles(url):
     article_list_from_json = read_article_from_json()
     text = get_article_content(url)
     list_tokens = get_tokens(text)
-    list_nouns = get_nouns(list_tokens)
+    list_pos = get_parts_of_speech(list_tokens)
+    list_nouns = get_nouns(list_pos)
     #list_nouns = list(map(get_nouns, list_tokens))
     common_words_dict = {}
     for article in article_list_from_json:
