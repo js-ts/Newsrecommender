@@ -9,9 +9,9 @@ class TestGetToken(unittest.TestCase):
         self.assertNotEqual(len(get_tokens('hello world')), 0)
 
     def test_get_nouns(self):
-        self.assertEqual(get_nouns(['car', 'banana', 'go']), ['car', 'banana'])
+        self.assertEqual(get_nouns('car'), 'car')
+        self.assertEqual(get_nouns('car'), 'None')
 
 
 if __name__ == '__main__':
 	unittest.main()
-    
