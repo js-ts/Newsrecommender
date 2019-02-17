@@ -6,8 +6,6 @@ import re
 import os
 
 # Download relevant NLTK data
-#from source.news_articles_processor import get_parts_of_speech
-
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 
@@ -27,16 +25,11 @@ def get_parsed_text(text):
     soup = BeautifulSoup(text, 'html.parser')
     text = get_clean_text(soup)
 
+    #regular expression as a DSL
     def remove_special_char():
         cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
         return cleaned_text
     return remove_special_char
-
-
-# #regular expression as a DSL
-# def remove_special_char(text):
-#     cleaned_text = re.sub('[^a-zA-Z0-9-_.]', ' ', text)
-#     return cleaned_text
 
 
 def get_clean_text(soup):
@@ -68,7 +61,6 @@ def get_nouns(tagged):
 
 
 def get_common_words(list_one, list_two):
-
     common_words = [value for value in list_two if value in list_one]
     return common_words
 
