@@ -14,17 +14,17 @@ Contents
 1.  Introduction
 2.  UML (Unified Model Language)
 
--   Use case diagram
--   Activity diagram
--   Sequence diagram
+  -   Use case diagram
+  -   Activity diagram
+  -   Sequence diagram
 
-1.  Metrics (At least two Sonarqube)
+3.  Metrics (At least two Sonarqube)
 
 -   Duplication
 -   Security
 -   Reliability
 
-1.  Clean Code Development
+4.  Clean Code Development
 
 -   Naming convention
 -   No side effect functions
@@ -46,27 +46,16 @@ Contents
 -   Anonymous function
 -   Closures
 
-How to run this code.
-1. **Install requirements:**
-     Install requirements.txt
-2. **Run server:**
-    To run server use this path "python /newsrecommender/src/main/python/recommender_server.py"
-3. **Access web server:**
-   You can access web server on 127.0.0.1:5000/newsrecommender
-
-![Before enter url](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/beforeinput%20url.png)
-
-![Enter url](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/enterurl.png)
-
-![Top 3 articles](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/top3articles.png)
+9. How to run the recommender system server?
 
 
-Introduction:
+
+1 Introduction:
 =============
 
 This Project is a content-based recommender system for news articles. The goal of this recommender system is to give the user a choice of news articles what they want to read. This recommender system checks what a user is currently reading in terms of news articles and recommend semantically top three similar articles on the basis of common nouns.
 
-UML(Unified Modeling Language):
+2 UML(Unified Modeling Language):
 ===============================
 
 UML is a standardized modeling language consisting of an integrated set of diagram, developed to help system and software developers for specifying , visualizing, constructing and documenting the artifacts of software system as well as for business modeling and other non software system.
@@ -90,7 +79,7 @@ Sequence UML diagram of the recommender system as shown in below fig-3.
 
 
 
-Metrics:
+3 Metrics:
 ========
 
 In software development, a metric is the measurement of a program’s performance or efficiency. For code analysis and review, Sonarqube is the probably best static code analyzer. Its easy to find bugs, code smell and security vulnerabilities. Sonarqube offers report on code issues, duplication(lines, blocks), code coverage, reliability, security , unit tests, complexity , comments and bugs.
@@ -113,7 +102,7 @@ Reliability metric analyze new bugs(number of news bugs issues in source code.
 
 ![Reliability metrics](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/reliability.png)
 
-Clean code development:
+4 Clean code development:
 =======================
 
 Clean code means that code which is easy to understand and easy to change. Easy to understand the flow of entire application, easy to understand role and responsibility of each class, easy to understand what each method does , what is the purpose of expression and variable and easy to fix bugs.
@@ -161,7 +150,7 @@ It’s important to write clean and simple code that can be easily understood by
 
 ![Useless comments](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/uselesscomments.png)
 
-Build Management with Pybuilder:
+5 Build Management with Pybuilder:
 ================================
 
 In this recommender system , Pybuilder has been used with build management. Pybuilder is a project management tool for python. It organizes code with a consistent directory structure (for source code, scripts and tests), manages unit testing, code coverage and can easily package your code. Here is the Build.py file which consist main description for this project.
@@ -173,7 +162,7 @@ After runing the pybuilder(pyb) with unit tests, it shows in below image that bu
 ![Build Management Successed](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/buildsucces.png)
 
 
-CI/CD (Continuous Integration and Continuous Delivery with Travis):
+6 CI/CD (Continuous Integration and Continuous Delivery with Travis):
 ===================================================================
 
 Continuous integration and Contentious delivery pipeline of this project is based on Git, Travis CI and Heroku. When you made any modification in source code, Travis CI will activate , which will check a set of tests for a successful Integration of new coded added. After successful Integration, Travis CI will deploy source code on production server at Heroku.
@@ -188,7 +177,7 @@ Check build status, it is pass or fail. See output in below figures.
 
 ![output travis](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newtravis.png)
 
-DSL(Domain specific language):
+7 DSL(Domain specific language):
 ==============================
 
 Domain specific language is a computer language specialized to a particular application(to meet a specific need). Domain specific languages are distinguished from general purpose languages like C++, java, python etc. Popular examples of DSL are SQL, HTML, XML, UML etc. In this project I had used “regular expression” and “HTML” as a DSL. Following are the examples:
@@ -207,24 +196,24 @@ Here it is used as DSL because HTML has a specific domain, It is only using for 
 
 ![HTML](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newhtml.png)
 
-Functional Programming:
+8 Functional Programming:
 =======================
 
 Functional programming is a programming paradigm of writing code. Functional programming allows you to write more compressed, predictable code and it’s easy to test. Following few examples of functional programming have been used in pet project code.
 
 ### 1. High order function:
 
-A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map I have used in project code.
+A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. I have used both cases of a higher order function in my project which is described below.
             
-**A function which takes another function as an input(map):**
-Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here is an example from project code shows in below figure
+**A function which takes another function as an input (map):**
+Map function apply a passed-in function to each item in an iterable object and return a list containing all function call results. Here is an example from project code shows in below figure. In this example, I pass ```get_nouns()``` function as an input to the map function which apply ```get_nouns()``` on each item in the list of parts of speech tuples. The result of map is converted to list which is a collection of nouns, filtered from all parts of speech tuples.  
 
 ![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/getnounfunc.png)
 
 ![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/getnounmap.png)
 
 **A function which returns another function:**
-I have used a nested function in this project code which return a function. The outer function “get_parsed_text” takes text as input and parsed the text. Inner function “Remove_special_char” remove special character from text and return clean text. First called the outer function “get_parsed_text” ,passed content as a parameter and assign to special_char_func. Then locally called “special_char_func()” function  and return it. As shown in below figures how to call them.
+I have used a nested function in this project which return another function. The outer function ```get_parsed_text()``` takes raw text as input and clean it using its own code as well as that of the inner function ```Remove_special_char()```. ```Remove_special_char()``` removes special character from text and return processed text. I first call the outer function ```get_parsed_text()``` with raw content as an input parameter and it return the ```Remove_special_char``` function as a return value. I than call function ```Remove_special_char()``` which has access to the alread processed text in ```get_parsed_text()``` and remove the special characters from the text and return the clean text. This functionality is shown in the following two code snippets.
 
 ![Function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/functionasaparameter.png)
 
@@ -260,3 +249,23 @@ Lambda is an anonymous function. Lambda function used when we don’t want to wr
 A closure is a function object that remembers values in enclosing scope even if they are not present in memory. I have used Python closure in project code, you can see an example in below figure.
 
 ![Function as a parameter](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/closurescreenshot.png)
+
+
+9 How to run the recommender system server?:
+=======================
+How to run this code.
+1. **Install requirements:**
+     ```Install requirements.txt```
+2. **Run server:**
+    To run server, use the following command: 
+    
+    ```python /newsrecommender/src/main/python/recommender_server.py```
+3. **Access web server:**
+   You can access web server on ```127.0.0.1:5000/newsrecommender``` or at the address shown to you when you run the server. The port might be different. Once you access this address, you will be offered a page where you can enter a url (url for the currently read article by a user). Once you send that url to this web server, it will return top three articles. At this stage, I have kept it very simple with naive names. At a later stage, I intend to include articles title instead of just simple hyper links. Following will be the screens which a user will see as its user journey.
+
+![Before enter url](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/beforeinput%20url.png)
+
+![Enter url](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/enterurl.png)
+
+![Top 3 articles](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/top3articles.png)
+
