@@ -257,7 +257,7 @@ How to run this code.
 1. **Install requirements:**
      ```Install requirements.txt```
 2. **Run server:**
-    To run server, use the following command: ```python /newsrecommender/src/main/python/recommender_server.py`
+    To run server, use the following command: ```python /newsrecommender/src/main/python/recommender_server.py```
 3. **Access web server:**
    You can access web server on ```127.0.0.1:5000/newsrecommender``` or at the address shown to you when you run the server. The port might be different. Once you access this address, you will be offered a page where you can enter a url (url for the currently read article by a user). Once you send that url to this web server, it will return top three articles. At this stage, I have kept it very simple with naive names. At a later stage, I intend to include articles title instead of just simple hyper links. Following will be the screens which a user will see as its user journey.
 
