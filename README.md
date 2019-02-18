@@ -40,15 +40,19 @@ Contents
 
  8. Functional Programming
 
+-   High order function
+-   Side effects free function
 -   Final data structure
--   Side effects free functional
--   Higher order functional
--   Clojures/Anonymous function
--   Function as a parameter and return values
+-   Anonymous function
+-   Closures
 
 How to run this code.
-1. Install requirements.txt
-2. How to up server(127.0.0.1:500/newsrecommender)
+1. Install requirements
+    requirements.txt
+2. Run server
+    python /home/zia/Pycharmprojects/newsrecommender/src/main/python/recommender_server
+3. Access web server
+   127.0.0.1/newsrecommender
 
 Introduction:
 =============
@@ -113,11 +117,24 @@ Proper naming convention is very important in clean code development. Easy reada
 
 ![Naming Convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/namingconvention.png)
 
+![Naming convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/namec1.png)
+
+![Naming convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/namec2.png)
+
+![Naming convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/cleanedtextvariabele.png)
+
+![Naming convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/commonwordsvariable.png)
+
+![Naming convention](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/texttokenvariable.png)
+
+
 ### 2. **No side effect :**
 
 In programming, side effect is when a function or expression modify state of a variable from outside its scope(local environment).Mostly without side effect functions have used in this project code.
 
-![No side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sideeffect.png)
+![No side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sideeffectpos.png)
+
+![No sideefect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/nosideefectfun.png)
 
 ### 3. **Exception Handling:**
 
@@ -129,7 +146,7 @@ Wherever necessary exception handling blocks have been added to ensure that no r
 
 Make sure each piece of code is doing what you expect it to do. Following is an example of unit test which used for this recommender system.
 
-![Unit test](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/unittest.png)
+![Unit test](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newunittests.png)
 
 ### 5. **Useless comment:**
 
@@ -142,7 +159,7 @@ Build Management with Pybuilder:
 
 In this recommender system , Pybuilder has been used with build management. Pybuilder is a project management tool for python. It organizes code with a consistent directory structure (for source code, scripts and tests), manages unit testing, code coverage and can easily package your code. Here is the Build.py file which consist main description for this project.
 
-![Build Management](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/build.ppp.png)
+![Build Management](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newbuildpy.png)
 
 After runing the pybuilder(pyb) with unit tests, it shows in below image that build successful.
 
@@ -173,7 +190,7 @@ Domain specific language is a computer language specialized to a particular appl
 
 A regular expression is a sequence of character that helps you match or find other strings or set of strings, using a specialized syntax held in pattern. Regular expression used as a DSL in this project code. Regular expression used to remove special characters from text.
 
-![Regular expression](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/regularexp.png)
+![Regular expression](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newregularexpre.png)
 
 ### 2. HTML:
 
@@ -181,42 +198,60 @@ HTML is standard markup language which is using to create and design web page .
 
 Here it is used as DSL because HTML has a specific domain, It is only using for web pages. I used HTML to make front web page for my recommender system where user can enter url and recommender system recommending top 3 articles.
 
-![HTML](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/html.png)
+![HTML](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/newhtml.png)
 
 Functional Programming:
 =======================
 
 Functional programming is a programming paradigm of writing code. Functional programming allows you to write more compressed, predictable code and it’s easy to test. Following few examples of functional programming have been used in pet project code.
 
-### 1. **Final data structure:**
+### 1. High order function:
 
-Some variables have been made immutable in project code.
+A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map and filter have used in project code. Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here map function takes get\_common\_words() function and a list, return as a result common nouns list.
+            
+        A function which takes another function as an input(map):
+        Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here is an example from project code shows in below figure
 
-![Final DS](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/finalds.png)
+![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/getnounfunc.png)
+
+![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/getnounmap.png)
+
+            A function which returns another function:
+            Take a function as a parameter and return value has also used in this project code. Here is an example, which shows “return a function and how to call them”
+
+![Function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/functionasaparameter.png)
+
+![Function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/functionreturn.png)
+
 
 ### 2. **Side effects free function:**
 
 Side effect are operation that change the global state of a variable or expression. All assignment and input/output operators considered side effects. Here I used function programming in project code, which has no side effect and mostly in functional programming , function have no side effects. Following is an example of side effect free function.
 
-![Side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sideeffect.png)
+![Side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/namingconvention.png)
+
+![Side effect](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/sideeffectpos.png)
 
 
-### 3)High order function:
 
-A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map and filter have used in project code. Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here map function takes get\_common\_words() function and a list, return as a result common nouns list.
+### 3. **Final data structure:**
 
-![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/mapfunction.png)
+Some variables have been made immutable in project code.
 
-### 4. **Clojures/Anonymous function:**
+![Final DS](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/finalds.png)
+
+
+
+### 4. **Anonymous function:**
 
 Lambda is an anonymous function. Lambda function used when we don’t want to write full function like def . A lambda function can take any number of arguments but can only have one expression. Assign the lambda expression to a variable, it works like python function. Lambda function used in this project code.
 
 ![Anonymous function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/lambdafunc.png)
 
-### 5. **Function as a parameter and return value:**
+### 5. **Closure:**
 
-Take a function as a parameter and return value has also used in this project code.
+A closure is a combination of code and scope. Python functions are a combination of code to be
+executed and the scope in which execute them. I used Python closure in project code, you can see
+an example in below figure.
 
-It is an example of high order function, here “get\_token()” is a normal function, takes a function “get\_parts\_of\_speech()” as a input and as a result return a function.
-
-![Function as a parameter](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/inputfuncreturnfunc.png)
+![Function as a parameter](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/closurescreenshot.png)
