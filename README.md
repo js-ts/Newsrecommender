@@ -54,11 +54,11 @@ How to run this code.
 3. **Access web server:**
    You can access web server on 127.0.0.1:5000/newsrecommender
 
-![Before enter url]()
+![Before enter url](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/beforeinput%20url.png)
 
-![Before enter url]()
+![Enter url](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/enterurl.png)
 
-![Before enter url]()
+![Top 3 articles](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/top3articles.png)
 
 
 Introduction:
