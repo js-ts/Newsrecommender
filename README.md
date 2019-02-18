@@ -47,11 +47,19 @@ Contents
 -   Closures
 
 How to run this code.
-1. Install requirements.txt
-2. Run server
+1. **Install requirements:**
+     Install requirements.txt
+2. **Run server:**
     To run server use this path "python /newsrecommender/src/main/python/recommender_server.py"
-3. Access web server
+3. **Access web server:**
    You can access web server on 127.0.0.1:5000/newsrecommender
+
+![Before enter url]()
+
+![Before enter url]()
+
+![Before enter url]()
+
 
 Introduction:
 =============
