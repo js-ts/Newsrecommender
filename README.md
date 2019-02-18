@@ -203,10 +203,10 @@ Functional programming is a programming paradigm of writing code. Functional pro
 
 ### 1. High order function:
 
-A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map I have used in project code.
+A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. I have used both cases of a higher order function in my project which is described below.
             
-**A function which takes another function as an input(map):**
-Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here is an example from project code shows in below figure
+**A function which takes another function as an input (map):**
+Map function apply a passed-in function to each item in an iterable object and return a list containing all function call results. Here is an example from project code shows in below figure. In this example, I pass ```get_nouns()``` function as an input to the map function which apply ```get_nouns()``` on each item in the list of parts of speech tuples. The result of map is converted to list which is a collection of nouns, filtered from all parts of speech tuples.  
 
 ![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/getnounfunc.png)
 
