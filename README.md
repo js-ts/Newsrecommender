@@ -47,12 +47,11 @@ Contents
 -   Closures
 
 How to run this code.
-1. Install requirements
-    requirements.txt
+1. Install requirements.txt
 2. Run server
-    python /home/zia/Pycharmprojects/newsrecommender/src/main/python/recommender_server
+    To run server use this path "python /newsrecommender/src/main/python/recommender_server.py"
 3. Access web server
-   127.0.0.1:5000/newsrecommender
+   You can access web server on 127.0.0.1:5000/newsrecommender
 
 Introduction:
 =============
@@ -207,7 +206,7 @@ Functional programming is a programming paradigm of writing code. Functional pro
 
 ### 1. High order function:
 
-A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map and filter have used in project code. Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here map function takes get\_common\_words() function and a list, return as a result common nouns list.
+A high order function is a function that take function as a parameter or an argument or returns a function. High order function is in contrast to first order function which don’t take a function as an argument or return a function as output. High order functions like map I have used in project code.
             
 **A function which takes another function as an input(map):**
 Map function applied a passed-in function to each item in an iterable object and return a list containing all function call result. Here is an example from project code shows in below figure
@@ -217,7 +216,7 @@ Map function applied a passed-in function to each item in an iterable object and
 ![High order function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/getnounmap.png)
 
 **A function which returns another function:**
-Take a function as a parameter and return value has also used in this project code. Here is an example, which shows “return a function and how to call them”
+I have used a nested function in this project code which return a function. The outer function “get_parsed_text” takes text as input and parsed the text. Inner function “Remove_special_char” remove special character from text and return clean text. First called the outer function “get_parsed_text” ,passed content as a parameter and assign to special_char_func. Then locally called “special_char_func()” function  and return it. As shown in below figures how to call them.
 
 ![Function](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/functionasaparameter.png)
 
@@ -250,8 +249,6 @@ Lambda is an anonymous function. Lambda function used when we don’t want to wr
 
 ### 5. **Closure:**
 
-A closure is a combination of code and scope. Python functions are a combination of code to be
-executed and the scope in which execute them. I used Python closure in project code, you can see
-an example in below figure.
+A closure is a function object that remembers values in enclosing scope even if they are not present in memory. I have used Python closure in project code, you can see an example in below figure.
 
 ![Function as a parameter](https://raw.githubusercontent.com/Ziasafi/newsrecommender/master/images/closurescreenshot.png)
