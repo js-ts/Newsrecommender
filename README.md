@@ -46,6 +46,10 @@ Contents
 -   Clojures/Anonymous function
 -   Function as a parameter and return values
 
+How to run this code.
+1. Install requirements.txt
+2. How to up server(127.0.0.1:500/newsrecommender)
+
 Introduction:
 =============
 

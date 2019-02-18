@@ -1,12 +1,12 @@
 from flask import Flask
 from flask import request
-from flask import jsonify
 import news_articles_processor as nap
 
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET'])
+
+@app.route("/newsrecommender", methods=['GET'])
 def recommended_articles_get():
     recommended_articles = """
         <h2>News recommender system</h2>
@@ -18,6 +18,7 @@ def recommended_articles_get():
     """
 
     return recommended_articles
+
 
 @app.route("/rec_articles", methods=['POST'])
 def recommended_articles_post():

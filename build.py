@@ -8,15 +8,15 @@ use_plugin("python.flake8")
 use_plugin("python.distutils")
 
 
-name    = "newsrecommender"
+name = "newsrecommender"
 version = "1.0"
 
 summary = "News recommender"
-url     = "https://github.com/Ziasafi/newsrecommender.git"
+url = "https://github.com/Ziasafi/newsrecommender.git"
 
 
-authors      = [Author("Zia Muhammad", "zia-muhammad@outlook.com")]
-license      = "None"
+authors = [Author("Zia Muhammad", "zia-muhammad@outlook.com")]
+license = "None"
 default_task = "publish"
 
 @init
