@@ -52,7 +52,7 @@ How to run this code.
 2. Run server
     python /home/zia/Pycharmprojects/newsrecommender/src/main/python/recommender_server
 3. Access web server
-   127.0.0.1/newsrecommender
+   127.0.0.1:5000/newsrecommender
 
 Introduction:
 =============
