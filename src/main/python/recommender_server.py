@@ -1,23 +1,14 @@
 from flask import Flask
 from flask import request
 import news_articles_processor as nap
-
+from flask import url_for, redirect
 
 app = Flask(__name__)
 
 
 @app.route("/newsrecommender", methods=['GET'])
 def recommended_articles_get():
-    recommended_articles = """
-        <h2>News recommender system</h2>
-        <form method="POST" action="/rec_articles">
-            <label>Enter your url</label>
-            <input type='text' name='url'>
-            <input type='submit'>
-        </form>
-    """
-
-    return recommended_articles
+    return redirect(url_for('static', filename='index.html'))
 
 
 @app.route("/rec_articles", methods=['POST'])
@@ -27,7 +18,8 @@ def recommended_articles_post():
     top_3_match_articles = nap.get_top_3_articles(str(input_url))
 
     recommended_articles = """
-        <h2> Your top3 article are:</h2>
+    
+        <h2> Your top three article are:</h2>
         <ul>
             <li>
                 <a href='""" + top_3_match_articles[0][0] + """'>First recommended article</a>
